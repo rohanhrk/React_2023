@@ -1,11 +1,12 @@
 import ReactDOM from "react-dom/client";
-import Header from "./Components/Header/Header";
-import Body from "./Components/Body/Body";
-import Footer from "./Components/Footer/Footer";
-import About from "./Components/Header/About";
-import Contact from "./Components/Header/Contact";
-import Cart from "./Components/Header/Cart";
-import Error from "./Components/Error/Error";
+import Header from "./src/components/Header/Header";
+import Body from "./src/components/Body/Body";
+import Footer from "./src/components/Footer/Footer";
+import About from "./src/components/Header/About";
+import Contact from "./src/components/Header/Contact";
+import Cart from "./src/components/Header/Cart";
+import Error from "./src/components/Error/Error";
+import RestaurantMenu from "./src/components/Body/RestaurantMenu";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -40,6 +41,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/restaurant/:id",
+        element: <RestaurantMenu />,
       },
     ],
   },

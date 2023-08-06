@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import { error_img_url } from "../../Constant/Constant";
+import { error_img_url } from "../../utils/constant/Constant";
 
 const Error = () => {
     const errorResponse = useRouteError();

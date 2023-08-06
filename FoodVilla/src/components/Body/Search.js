@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { handleFilterData } from "../../utils/helper/helpers";
 
 const Search = ({
   allRestaurant,
@@ -12,20 +13,11 @@ const Search = ({
     setsearchTextInput(text);
   }
 
-  function handleFilterData(searchTextInput, allRestaurant) {
-    const data = allRestaurant.filter((restaurant) => {
-      return restaurant?.info?.name
-        .toLowerCase()
-        .includes(searchTextInput.toLowerCase());
-    });
-
-    return data;
-  }
-
   function handleSearchData(searchTextInput, allRestaurant) {
     const filteredRestautantData = handleFilterData(searchTextInput, allRestaurant);
     setFilteredRestaurant(filteredRestautantData);
   }
+  
   return (
     <div className="search-container">
       <input

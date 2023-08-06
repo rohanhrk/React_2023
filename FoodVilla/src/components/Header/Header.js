@@ -1,10 +1,10 @@
-import { IMG_CDN_URL } from "../../Constant/Constant";
 import { Link } from "react-router-dom";
-const logoUrl = IMG_CDN_URL;
+import FoodVillaLogo from "../../asset/icon/foodvilla.png"
+
 const Logo = () => {
   return (
     <a href="/">
-      <img className="logo" src={logoUrl} alt="Food Villa Logo" />
+      <img className="logo" src={FoodVillaLogo} alt="Food Villa Logo" />
     </a>
   );
 };
